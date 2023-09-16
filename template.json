@@ -1,18 +1,95 @@
 {
   "individual": [
     {
-      "name": "Prepared by",
-      "type": "master_data_master_data_phuong_org_bp_get_departments",
+      "name": "Công ty (User) feed Location",
       "value": "",
-      "display": true,
+      "type": "master_data_orgchart_location_feedlocation",
+      "id": -1000020,
+      "position": -1000020,
+      "display": false,
+      "conditions": {
+        "locationRelated": true,
+        "min-length": 1,
+        "max-length": 1000
+      },
+      "additionalDisplayClass": "left-info"
+    },
+    {
+      "name": "Công ty (User)",
+      "value": "",
+      "type": "master_data_orgchart_ta_company_name",
+      "staticContent": "<p style='font-size: 12px; color: #f44842'><i></i></p>",
+      "id": -1000010,
+      "position": -1000010,
+      "display": false,
+      "conditions": {
+        "min-length": 1,
+        "max-length": 1000
+      },
+      "additionalDisplayClass": "right-info"
+    },
+    {
+      "name": "Prepared by",
+      "type": "splitter",
+      "id": -100000,
+      "position": -100000
+    },
+    {
+      "name": "Employee Number",
+      "type": "master_data_orgchart_ta",
+      "value": "",
+      "valuefeeder": "TicketOwner",
+      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>",
       "conditions": {
         "required": false,
         "min-length": 1,
         "max-length": 1000
       },
       "additionalDisplayClass": "left-info",
-      "id": -100000,
-      "position": -100000
+      "id": -99999,
+      "position": -99999
+    },
+    {
+      "name": "Employee Name",
+      "type": "master_data_orgchart_ta_employeename",
+      "value": "",
+      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>",
+      "conditions": {
+        "required": false,
+        "min-length": 1,
+        "max-length": 1000
+      },
+      "additionalDisplayClass": "right-info",
+      "id": -99998,
+      "position": -99998
+    },
+    {
+      "name": "Job Title",
+      "type": "master_data_orgchart_ta_jobtitle",
+      "value": "",
+      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>",
+      "conditions": {
+        "required": false,
+        "min-length": 1,
+        "max-length": 1000
+      },
+      "additionalDisplayClass": "left-info",
+      "id": -99997,
+      "position": -99997
+    },
+    {
+      "name": "Department",
+      "type": "master_data_orgchart_ta_department",
+      "value": "",
+      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>",
+      "conditions": {
+        "required": false,
+        "min-length": 1,
+        "max-length": 1000
+      },
+      "additionalDisplayClass": "right-info",
+      "id": -99996,
+      "position": -99996
     },
     {
       "name": "Date",
@@ -27,286 +104,6 @@
       "additionalDisplayClass": "left-info",
       "id": -99990,
       "position": -99990
-    },
-    {
-      "name": "Concession notice number",
-      "type": "number",
-      "value": "",
-      "display": true,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "left-info",
-      "id": -99980,
-      "position": -99980
-    },
-    {
-      "name": "REQUIREMENT OF CHANGE",
-      "type": "splitter",
-      "value": "",
-      "display": true,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "right-info",
-      "id": -99970,
-      "position": -99970
-    },
-    {
-      "name": "Product/ P/N",
-      "type": "",
-      "value": "",
-      "display": true,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "left-info",
-      "id": -99960,
-      "position": -99960
-    },
-    {
-      "name": "Note (product)",
-      "type": "text",
-      "value": "",
-      "display": true,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "right-info",
-      "id": -99950,
-      "position": -99950
-    },
-    {
-      "name": "Description of change",
-      "type": "textarea",
-      "value": "",
-      "display": true,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "left-info",
-      "id": -99940,
-      "position": -99940
-    },
-    {
-      "name": "Image before",
-      "type": "upload",
-      "value": "",
-      "display": true,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "left-info",
-      "id": -99930,
-      "position": -99930
-    },
-    {
-      "name": "Image after",
-      "type": "upload",
-      "value": "",
-      "display": true,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "right-info",
-      "id": -99920,
-      "position": -99920
-    },
-    {
-      "name": "Reason of change",
-      "type": "textarea",
-      "value": "",
-      "display": true,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "left-info",
-      "id": -99910,
-      "position": -99910
-    },
-    {
-      "name": "Note",
-      "type": "textarea",
-      "value": "",
-      "display": true,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "right-info",
-      "id": -99900,
-      "position": -99900
-    },
-    {
-      "name": "APPROVAL",
-      "type": "splitter",
-      "value": "",
-      "display": true,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "right-info",
-      "id": -99890,
-      "position": -99890
-    },
-    {
-      "name": "Approver",
-      "type": "select",
-      "value": "",
-      "display": true,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000,
-        "multiple": true,
-        "data": [
-          {
-            "text": "Engineering",
-            "value": "1"
-          },
-          {
-            "text": "Production",
-            "value": "2"
-          },
-          {
-            "text": "QC",
-            "value": "3"
-          },
-          {
-            "text": "Material Planning",
-            "value": "4"
-          },
-          {
-            "text": "Finance",
-            "value": "5"
-          }
-        ]
-      },
-      "additionalDisplayClass": "left-info",
-      "id": -99880,
-      "position": -99880
-    },
-    {
-      "name": "Engineering",
-      "type": "user",
-      "value": "",
-      "display": false,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "right-info",
-      "id": -3,
-      "position": -99870
-    },
-    {
-      "name": "Production",
-      "type": "user",
-      "value": "",
-      "display": false,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "left-info",
-      "id": -20,
-      "position": -99860
-    },
-    {
-      "name": "QC",
-      "type": "user",
-      "value": "",
-      "display": false,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "right-info",
-      "id": -30,
-      "position": -99850
-    },
-    {
-      "name": "Material Planning",
-      "type": "user",
-      "value": "",
-      "display": false,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "right-info",
-      "id": -40,
-      "position": -99840
-    },
-    {
-      "name": "Finance",
-      "type": "user",
-      "value": "",
-      "display": false,
-      "conditions": {
-        "required": false,
-        "min-length": 1,
-        "max-length": 1000
-      },
-      "additionalDisplayClass": "left-info",
-      "id": -50,
-      "position": -99830
-    },
-    {
-      "name": "Material Review",
-      "type": "select",
-      "value": "",
-      "conditions": {
-        "required": false,
-        "data": [
-          {
-            "text": "NA",
-            "value": "1"
-          },
-          {
-            "text": "Rework",
-            "value": "2"
-          },
-          {
-            "text": "Use with Recession ",
-            "value": "3"
-          },
-          {
-            "text": "Scrap",
-            "value": "4"
-          },
-          {
-            "text": "Use as is",
-            "value": "5"
-          }
-        ]
-      },
-      "additionalDisplayClass": "left-info",
-      "id": -60,
-      "position": -99845
     }
   ]
 }

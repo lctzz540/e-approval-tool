@@ -1,5 +1,4 @@
-use serde_derive::Deserialize;
-use serde_derive::Serialize;
+use serde_derive::{Deserialize, Serialize};
 use std::fs::File;
 use std::io::{BufReader, Read};
 
@@ -28,15 +27,17 @@ pub struct Individual {
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Conditions {
-    pub required: bool,
+    pub required: Option<bool>,
     #[serde(default)]
     pub data: Vec<Daum>,
-    #[serde(rename = "min-length")]
+    #[serde(rename = "minLength")]
     pub min_length: i64,
-    #[serde(rename = "max-length")]
+    #[serde(rename = "maxLength")]
     pub max_length: i64,
     pub multiple: Option<bool>,
     pub location_related: Option<bool>,
+    #[serde(rename = "displayCondition")]
+    pub display_condition: Option<DisplayCondition>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -46,6 +47,17 @@ pub struct Daum {
     pub value: String,
 }
 
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct DisplayCondition {
+    #[serde(rename = "idCondition")]
+    pub id_condition: Option<i64>,
+    #[serde(rename = "valueCondition")]
+    pub value_condition: Option<String>,
+    #[serde(rename = "dataCondition")]
+    pub data_condition: Option<String>,
+}
+
 pub fn create_individual(
     name: &str,
     id: i64,
@@ -53,6 +65,9 @@ pub fn create_individual(
     is_required: bool,
     _data: Vec<Daum>,
     position: i64,
+    displaycondition: &str,
+    displayconditionid: i64,
+    staticcontent: &str,
 ) -> Individual {
     let mut individual = Individual::default();
 
@@ -63,17 +78,44 @@ pub fn create_individual(
     individual.additional_display_class = Some("left-info".to_string());
     individual.id = id;
     individual.position = position;
+    individual.static_content = Some(staticcontent.to_string());
 
     let data = _data;
 
-    individual.conditions = Some(Conditions {
-        data,
-        required: is_required,
-        min_length: 1,
-        max_length: 1000,
-        ..Conditions::default()
-    });
+    let display_condition_object = DisplayCondition {
+        id_condition: Some(displayconditionid),
+        value_condition: Some(displaycondition.to_string()),
+        data_condition: Some("INDIVIDUAL".to_string()),
+    };
+    if displayconditionid == 0 {
+        individual.conditions = Some(Conditions {
+            required: Some(is_required),
+            min_length: 1,
+            max_length: 1000,
+            data,
+            ..Conditions::default()
+        });
+    } else {
+        individual.conditions = Some(Conditions {
+            required: Some(is_required),
+            min_length: 1,
+            max_length: 1000,
+            data,
+            display_condition: Some(display_condition_object),
+            ..Conditions::default()
+        });
+    }
 
+    individual
+}
+
+pub fn make_splitter(name: &str, id: i64, datatype: &str) -> Individual {
+    let mut individual = Individual::default();
+
+    individual.name = name.to_string();
+    individual.type_field = datatype.to_string();
+    individual.id = id;
+    individual.position = id;
     individual
 }
 
@@ -98,7 +140,13 @@ pub fn read_json_file(filename: &str) -> Option<Template> {
     let mut json_string = String::new();
     reader.read_to_string(&mut json_string).ok()?;
 
-    let root: Template = serde_json::from_str(&json_string).ok()?;
+    let root: Template = match serde_json::from_str(&json_string) {
+        Ok(root) => root,
+        Err(err) => {
+            eprintln!("Error parsing JSON file: {}", err);
+            return None;
+        }
+    };
 
     Some(root)
 }
