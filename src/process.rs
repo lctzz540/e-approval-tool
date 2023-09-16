@@ -46,6 +46,7 @@ pub fn process_request(file_path: &str) -> Result<(), Box<dyn Error>> {
         let mut _display_condition = String::new();
         let mut _static_content = String::new();
         let mut _display_condition_id: i64 = 0;
+        let mut _data_from: i64 = 0;
 
         for col_name in df.get_column_names() {
             if col_name == "NO" {
@@ -73,6 +74,10 @@ pub fn process_request(file_path: &str) -> Result<(), Box<dyn Error>> {
                 _datatype = df.column(col_name).unwrap().get(i).unwrap().to_string();
             }
             if col_name == "Json ID" {
+                _id = to_i64(df.column(col_name).unwrap().get(i).unwrap());
+            }
+
+            if col_name == "dataFrom" {
                 _id = to_i64(df.column(col_name).unwrap().get(i).unwrap());
             }
 
@@ -137,6 +142,7 @@ pub fn process_request(file_path: &str) -> Result<(), Box<dyn Error>> {
                 _name.as_str(),
                 _id,
                 _datatype.as_str(),
+                _data_from,
                 _is_required,
                 _data,
                 _id,

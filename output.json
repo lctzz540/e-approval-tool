@@ -11,9 +11,9 @@
         "data": [],
         "minLength": 1,
         "maxLength": 1000,
-        "locationRelated": true
+        "locationRelated": true,
       },
-      "additionalDisplayClass": "left-info"
+      "additionalDisplayClass": "left-info",
     },
     {
       "name": "Công ty (User)",
@@ -28,13 +28,13 @@
         "maxLength": 1000,
       },
       "additionalDisplayClass": "right-info",
-      "staticContent": "<p style='font-size: 12px; color: #f44842'><i></i></p>"
+      "staticContent": "<p style='font-size: 12px; color: #f44842'><i></i></p>",
     },
     {
       "name": "Prepared by",
       "type": "splitter",
       "id": -100000,
-      "position": -100000
+      "position": -100000,
     },
     {
       "name": "Employee Number",
@@ -46,7 +46,7 @@
         "required": false,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
       "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>",
@@ -62,10 +62,10 @@
         "required": false,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "right-info",
-      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>"
+      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>",
     },
     {
       "name": "Job Title",
@@ -77,10 +77,10 @@
         "required": false,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>"
+      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>",
     },
     {
       "name": "Department",
@@ -92,10 +92,10 @@
         "required": false,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "right-info",
-      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>"
+      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>",
     },
     {
       "name": "Date",
@@ -108,15 +108,15 @@
         "required": false,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
-      "additionalDisplayClass": "left-info"
+      "additionalDisplayClass": "left-info",
     },
     {
       "name": "Mold Information",
       "type": "splitter",
       "id": -99900,
-      "position": -99900
+      "position": -99900,
     },
     {
       "name": "Product name:",
@@ -129,10 +129,10 @@
         "required": true,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: 102M\"</i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: 102M\"</i></p>",
     },
     {
       "name": "Component name:",
@@ -145,10 +145,10 @@
         "required": true,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: Louver/Hanger/Face\"</i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: Louver/Hanger/Face\"</i></p>",
     },
     {
       "name": "Product size:",
@@ -161,10 +161,10 @@
         "required": true,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: 10X06\"</i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: 10X06\"</i></p>",
     },
     {
       "name": "Mold process:",
@@ -177,10 +177,10 @@
         "required": true,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: Process 1, Process 2,…\"</i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: Process 1, Process 2,…\"</i></p>",
     },
     {
       "name": "Kind of mold:",
@@ -206,10 +206,10 @@
           }
         ],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
       "name": "Type of mold:",
@@ -239,7 +239,7 @@
         }
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
       "name": "Type of mold:",
@@ -269,7 +269,7 @@
         }
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
       "name": "Reason for request:",
@@ -282,10 +282,10 @@
         "required": true,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
       "name": "Manufacturing",
@@ -307,10 +307,10 @@
           }
         ],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
       "name": "Urgent level",
@@ -332,10 +332,10 @@
           }
         ],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
       "name": "Request Date",
@@ -348,10 +348,10 @@
         "required": true,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
       "name": "Estimated time to complete the mold",
@@ -364,10 +364,10 @@
         "required": true,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
       "name": "Note",
@@ -380,10 +380,10 @@
         "required": false,
         "data": [],
         "minLength": 1,
-        "maxLength": 1000
+        "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>"
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     }
   ]
 }

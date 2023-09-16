@@ -18,8 +18,11 @@ pub struct Individual {
     pub type_field: String,
     pub id: i64,
     pub position: i64,
+    #[serde(rename = "dataFrom")]
+    pub datafrom: Option<i64>,
     pub display: Option<bool>,
     pub conditions: Option<Conditions>,
+    #[serde(rename = "additionalDisplayClass")]
     pub additional_display_class: Option<String>,
     pub static_content: Option<String>,
     pub valuefeeder: Option<String>,
@@ -71,6 +74,7 @@ pub fn create_individual(
     name: &str,
     id: i64,
     datatype: &str,
+    datafrom: i64,
     is_required: bool,
     _data: Vec<Daum>,
     position: i64,
@@ -88,7 +92,9 @@ pub fn create_individual(
     individual.id = id;
     individual.position = position;
     individual.static_content = Some(staticcontent.to_string());
-
+    if datafrom != 0 {
+        individual.datafrom = Some(datafrom);
+    }
     let data = _data;
 
     let display_condition_object = DisplayCondition {
