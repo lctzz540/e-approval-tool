@@ -1,15 +1,31 @@
-﻿NO,TÊN TRƯỜNG,BĂT BUỘC,LOẠI DỮ LIỆU,CẤU TRÚC DỮ LIỆU,displayConditionID,displayCondition,,select,staticContent,GHI CHÚ (để đảm bảo cấu hình đúng),Json ID
-B,Mold Information,,Splitter,,,,,,,,-99900
-1,Product name:,x,textarea,Individual,,,,,Ex: 102M,,-99800
-2,Component name:,x,textarea,Individual,,,,,Ex: Louver/Hanger/Face,,-99700
-3,Product size:,x,textarea,Individual,,,,,Ex: 10X06,,-99600
-4,Mold process:,x,textarea,Individual,,,,,"Ex: Process 1, Process 2,…",,-99500
-5,Kind of mold:,x,select,Individual,,,,"N/A,Pressing mold,Casting mold",,,-99400
-6.1,Type of mold:,x,select,Individual,-99400,2,,"Continuous Pressing,Single Pressing",,,-99300
-6.2,Type of mold:,x,select,Individual,-99400,3,,"Plastic Molding,Plastic Extrusion",,,-99200
-8,Reason for request:,x,textarea,Individual,,,,,,,-99100
-9,Manufacturing,x,select,Individual,,,,"TA,Out Source",,,-99000
-10,Urgent level,x,select,Individual,,,,"Normal,Urgent",,,-98900
-11,Request Date,x,date,Individual,,,,,,,-98800
-12,Estimated time to complete the mold,x,date,Individual,,,,,,,-98700
-13,Note,,textarea,Individual,,,,,,,-98600
+﻿NO,TÊN TRƯỜNG,BĂT BUỘC,LOẠI DỮ LIỆU,CẤU TRÚC DỮ LIỆU,dataFrom,displayConditionID,displayCondition,select,staticContent,GHI CHÚ (để đảm bảo cấu hình đúng),Json ID
+A,1. Product Information,,splitter,,,,,,,,-99900
+1,Component / Part No.,x,select,Individual,,,,"Front panel,Frame,Louve,Handle,Hanger,Other",,,-99800
+1.2,Other component / Other part No.,x,text,Individual,,-99800,6,,,,-99700
+2,Product name,x,text,Individual,,,,,,,-99600
+3,Supplier,x,select,Individual,,,,"Out source,TA",,,-99500
+4.1,Supplier Name,x,text,Individual,,-99500,1,,Fill name of supplier,,-99400
+4.2,Workshop Name,x,text,Individual,,-99500,2,,"Fill name of TA workshop. Ex: Pressing, Painting,…",,-99300
+5,Purpose,x,textarea,Individual,,,,,,,-99200
+B,2. First sample evaluation / Engineering evaluation,,splitter,,,,,,,,-99100
+1,Number of sample,x,number,Individual,,,,,,,-99000
+2,Evaluation date,x,date,Individual,,,,,,,-98900
+3,Owner,x,Masterdata,Individual,,,,,,,-98800
+C,3. Evaluation category,,splitter,,,,,,,,-98700
+1,3.1. Appearance inspection,,splitter,,,,,,,,-98600
+2,Qty,x,number,,-99000,,,,,,-98500
+3,Pass,x,number,,,,,,,,-98400
+4,Fail,x,number,,,,,,,,-98300
+5,Comments,,textarea,,,,,,,,-98200
+6,Evaluator,x,Masterdata,,,,,,,,-98100
+7,Attach file,,upload,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,

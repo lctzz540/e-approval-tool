@@ -113,31 +113,56 @@
       "additionalDisplayClass": "left-info",
     },
     {
-      "name": "Mold Information",
+      "name": "1. Product Information",
       "type": "splitter",
       "id": -99900,
       "position": -99900,
     },
     {
-      "name": "Product name:",
+      "name": "Component / Part No.",
       "value": "",
-      "type": "textarea",
+      "type": "select",
       "id": -99800,
       "position": -99800,
       "display": true,
       "conditions": {
         "required": true,
-        "data": [],
+        "data": [
+          {
+            "text": "Front panel",
+            "value": "1"
+          },
+          {
+            "text": "Frame",
+            "value": "2"
+          },
+          {
+            "text": "Louve",
+            "value": "3"
+          },
+          {
+            "text": "Handle",
+            "value": "4"
+          },
+          {
+            "text": "Hanger",
+            "value": "5"
+          },
+          {
+            "text": "Other",
+            "value": "6"
+          }
+        ],
         "minLength": 1,
         "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: 102M\"</i></p>",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
-      "name": "Component name:",
+      "name": "Other component / Other part No.",
       "value": "",
-      "type": "textarea",
+      "type": "text",
       "id": -99700,
       "position": -99700,
       "display": true,
@@ -146,14 +171,19 @@
         "data": [],
         "minLength": 1,
         "maxLength": 1000,
+        "displayCondition": {
+          "idCondition": -99800,
+          "valueCondition": "6",
+          "dataCondition": "INDIVIDUAL"
+        }
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: Louver/Hanger/Face\"</i></p>",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
-      "name": "Product size:",
+      "name": "Product name",
       "value": "",
-      "type": "textarea",
+      "type": "text",
       "id": -99600,
       "position": -99600,
       "display": true,
@@ -164,119 +194,81 @@
         "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: 10X06\"</i></p>",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
-      "name": "Mold process:",
+      "name": "Supplier",
       "value": "",
-      "type": "textarea",
+      "type": "select",
       "id": -99500,
       "position": -99500,
       "display": true,
       "conditions": {
         "required": true,
-        "data": [],
+        "data": [
+          {
+            "text": "Out source",
+            "value": "1"
+          },
+          {
+            "text": "TA",
+            "value": "2"
+          }
+        ],
         "minLength": 1,
         "maxLength": 1000,
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Ex: Process 1, Process 2,…\"</i></p>",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
-      "name": "Kind of mold:",
+      "name": "Supplier Name",
       "value": "",
-      "type": "select",
+      "type": "text",
       "id": -99400,
       "position": -99400,
       "display": true,
       "conditions": {
         "required": true,
-        "data": [
-          {
-            "text": "N/A",
-            "value": "1"
-          },
-          {
-            "text": "Pressing mold",
-            "value": "2"
-          },
-          {
-            "text": "Casting mold",
-            "value": "3"
-          }
-        ],
+        "data": [],
         "minLength": 1,
         "maxLength": 1000,
+        "displayCondition": {
+          "idCondition": -99500,
+          "valueCondition": "1",
+          "dataCondition": "INDIVIDUAL"
+        }
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Fill name of supplier\"</i></p>",
     },
     {
-      "name": "Type of mold:",
+      "name": "Workshop Name",
       "value": "",
-      "type": "select",
+      "type": "text",
       "id": -99300,
       "position": -99300,
       "display": true,
       "conditions": {
         "required": true,
-        "data": [
-          {
-            "text": "Continuous Pressing",
-            "value": "1"
-          },
-          {
-            "text": "Single Pressing",
-            "value": "2"
-          }
-        ],
+        "data": [],
         "minLength": 1,
         "maxLength": 1000,
         "displayCondition": {
-          "idCondition": -99400,
+          "idCondition": -99500,
           "valueCondition": "2",
           "dataCondition": "INDIVIDUAL"
         }
       },
       "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i>\"Fill name of TA workshop. Ex: Pressing, Painting,…\"</i></p>",
     },
     {
-      "name": "Type of mold:",
-      "value": "",
-      "type": "select",
-      "id": -99200,
-      "position": -99200,
-      "display": true,
-      "conditions": {
-        "required": true,
-        "data": [
-          {
-            "text": "Plastic Molding",
-            "value": "1"
-          },
-          {
-            "text": "Plastic Extrusion",
-            "value": "2"
-          }
-        ],
-        "minLength": 1,
-        "maxLength": 1000,
-        "displayCondition": {
-          "idCondition": -99400,
-          "valueCondition": "3",
-          "dataCondition": "INDIVIDUAL"
-        }
-      },
-      "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
-    },
-    {
-      "name": "Reason for request:",
+      "name": "Purpose",
       "value": "",
       "type": "textarea",
-      "id": -99100,
-      "position": -99100,
+      "id": -99200,
+      "position": -99200,
       "display": true,
       "conditions": {
         "required": true,
@@ -288,24 +280,21 @@
       "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
-      "name": "Manufacturing",
+      "name": "2. First sample evaluation / Engineering evaluation",
+      "type": "splitter",
+      "id": -99100,
+      "position": -99100,
+    },
+    {
+      "name": "Number of sample",
       "value": "",
-      "type": "select",
+      "type": "number",
       "id": -99000,
       "position": -99000,
       "display": true,
       "conditions": {
         "required": true,
-        "data": [
-          {
-            "text": "TA",
-            "value": "1"
-          },
-          {
-            "text": "Out Source",
-            "value": "2"
-          }
-        ],
+        "data": [],
         "minLength": 1,
         "maxLength": 1000,
       },
@@ -313,24 +302,15 @@
       "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
-      "name": "Urgent level",
+      "name": "Evaluation date",
       "value": "",
-      "type": "select",
+      "type": "date",
       "id": -98900,
       "position": -98900,
       "display": true,
       "conditions": {
         "required": true,
-        "data": [
-          {
-            "text": "Normal",
-            "value": "1"
-          },
-          {
-            "text": "Urgent",
-            "value": "2"
-          }
-        ],
+        "data": [],
         "minLength": 1,
         "maxLength": 1000,
       },
@@ -338,9 +318,9 @@
       "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
-      "name": "Request Date",
+      "name": "Owner",
       "value": "",
-      "type": "date",
+      "type": "masterdata",
       "id": -98800,
       "position": -98800,
       "display": true,
@@ -354,25 +334,15 @@
       "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
-      "name": "Estimated time to complete the mold",
-      "value": "",
-      "type": "date",
+      "name": "3. Evaluation category",
+      "type": "splitter",
       "id": -98700,
       "position": -98700,
-      "display": true,
-      "conditions": {
-        "required": true,
-        "data": [],
-        "minLength": 1,
-        "maxLength": 1000,
-      },
-      "additionalDisplayClass": "left-info",
-      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
     },
     {
-      "name": "Note",
+      "name": "3.1. Appearance inspection",
       "value": "",
-      "type": "textarea",
+      "type": "splitter",
       "id": -98600,
       "position": -98600,
       "display": true,
@@ -384,6 +354,153 @@
       },
       "additionalDisplayClass": "left-info",
       "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
+    },
+    {
+      "name": "Qty",
+      "value": "",
+      "type": "number",
+      "id": -98500,
+      "position": -98500,
+      "dataFrom": -99000,
+      "display": true,
+      "conditions": {
+        "required": true,
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000,
+      },
+      "additionalDisplayClass": "left-info",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
+    },
+    {
+      "name": "Pass",
+      "value": "",
+      "type": "number",
+      "id": -98400,
+      "position": -98400,
+      "display": true,
+      "conditions": {
+        "required": true,
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000,
+      },
+      "additionalDisplayClass": "left-info",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
+    },
+    {
+      "name": "Fail",
+      "value": "",
+      "type": "number",
+      "id": -98300,
+      "position": -98300,
+      "display": true,
+      "conditions": {
+        "required": true,
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000,
+      },
+      "additionalDisplayClass": "left-info",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
+    },
+    {
+      "name": "Comments",
+      "value": "",
+      "type": "textarea",
+      "id": -98200,
+      "position": -98200,
+      "display": true,
+      "conditions": {
+        "required": false,
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000,
+      },
+      "additionalDisplayClass": "left-info",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
+    },
+    {
+      "name": "Evaluator",
+      "value": "",
+      "type": "masterdata",
+      "id": -98100,
+      "position": -98100,
+      "display": true,
+      "conditions": {
+        "required": true,
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000,
+      },
+      "additionalDisplayClass": "left-info",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
+    },
+    {
+      "name": "Attach file",
+      "value": "",
+      "type": "upload",
+      "id": 0,
+      "position": 0,
+      "display": true,
+      "conditions": {
+        "required": false,
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000,
+      },
+      "additionalDisplayClass": "left-info",
+      "staticContent": "<p style=\"font-size: 12px; color: blue;\"><i></i></p>",
+    },
+    {
+      "type": "",
+      "id": 0,
+      "position": 0,
+    },
+    {
+      "type": "",
+      "id": 0,
+      "position": 0,
+    },
+    {
+      "type": "",
+      "id": 0,
+      "position": 0,
+    },
+    {
+      "type": "",
+      "id": 0,
+      "position": 0,
+    },
+    {
+      "type": "",
+      "id": 0,
+      "position": 0,
+    },
+    {
+      "type": "",
+      "id": 0,
+      "position": 0,
+    },
+    {
+      "type": "",
+      "id": 0,
+      "position": 0,
+    },
+    {
+      "type": "",
+      "id": 0,
+      "position": 0,
+    },
+    {
+      "type": "",
+      "id": 0,
+      "position": 0,
+    },
+    {
+      "type": "",
+      "id": 0,
+      "position": 0,
     }
   ]
 }

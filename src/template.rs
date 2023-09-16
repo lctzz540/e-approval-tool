@@ -95,6 +95,7 @@ pub fn create_individual(
     if datafrom != 0 {
         individual.datafrom = Some(datafrom);
     }
+
     let data = _data;
 
     let display_condition_object = DisplayCondition {

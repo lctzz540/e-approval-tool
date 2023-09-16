@@ -78,7 +78,7 @@ pub fn process_request(file_path: &str) -> Result<(), Box<dyn Error>> {
             }
 
             if col_name == "dataFrom" {
-                _id = to_i64(df.column(col_name).unwrap().get(i).unwrap());
+                _data_from = to_i64(df.column(col_name).unwrap().get(i).unwrap());
             }
 
             if col_name == "displayConditionID" {
