@@ -152,7 +152,9 @@ pub fn process_request(file_path: &str) -> Result<(), Box<dyn Error>> {
     }
     match template::template_to_json(&template_out) {
         Ok(json_string) => {
-            println!("JSON representation:\n{}", json_string);
+            if let Err(err) = template::write_json_to_file("output.json", &json_string) {
+                eprintln!("Error exporting JSON to file: {}", err);
+            }
         }
         Err(err) => {
             eprintln!("Error converting to JSON: {}", err);

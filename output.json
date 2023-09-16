@@ -1,6 +1,118 @@
 {
   "individual": [
     {
+      "name": "Công ty (User) feed Location",
+      "value": "",
+      "type": "master_data_orgchart_location_feedlocation",
+      "id": -1000020,
+      "position": -1000020,
+      "display": false,
+      "conditions": {
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000,
+        "locationRelated": true
+      },
+      "additionalDisplayClass": "left-info"
+    },
+    {
+      "name": "Công ty (User)",
+      "value": "",
+      "type": "master_data_orgchart_ta_company_name",
+      "id": -1000010,
+      "position": -1000010,
+      "display": false,
+      "conditions": {
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000,
+      },
+      "additionalDisplayClass": "right-info",
+      "staticContent": "<p style='font-size: 12px; color: #f44842'><i></i></p>"
+    },
+    {
+      "name": "Prepared by",
+      "type": "splitter",
+      "id": -100000,
+      "position": -100000
+    },
+    {
+      "name": "Employee Number",
+      "value": "",
+      "type": "master_data_orgchart_ta",
+      "id": -99999,
+      "position": -99999,
+      "conditions": {
+        "required": false,
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000
+      },
+      "additionalDisplayClass": "left-info",
+      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>",
+      "valuefeeder": "TicketOwner"
+    },
+    {
+      "name": "Employee Name",
+      "value": "",
+      "type": "master_data_orgchart_ta_employeename",
+      "id": -99998,
+      "position": -99998,
+      "conditions": {
+        "required": false,
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000
+      },
+      "additionalDisplayClass": "right-info",
+      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>"
+    },
+    {
+      "name": "Job Title",
+      "value": "",
+      "type": "master_data_orgchart_ta_jobtitle",
+      "id": -99997,
+      "position": -99997,
+      "conditions": {
+        "required": false,
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000
+      },
+      "additionalDisplayClass": "left-info",
+      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>"
+    },
+    {
+      "name": "Department",
+      "value": "",
+      "type": "master_data_orgchart_ta_department",
+      "id": -99996,
+      "position": -99996,
+      "conditions": {
+        "required": false,
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000
+      },
+      "additionalDisplayClass": "right-info",
+      "staticContent": "<p style='font-size: 12px; color: blue'><i></i></p>"
+    },
+    {
+      "name": "Date",
+      "value": "",
+      "type": "date",
+      "id": -99990,
+      "position": -99990,
+      "display": true,
+      "conditions": {
+        "required": false,
+        "data": [],
+        "minLength": 1,
+        "maxLength": 1000
+      },
+      "additionalDisplayClass": "left-info"
+    },
+    {
       "name": "Mold Information",
       "type": "splitter",
       "id": -99900,
@@ -81,12 +193,16 @@
         "required": true,
         "data": [
           {
-            "text": "Pressing mold",
+            "text": "N/A",
             "value": "1"
           },
           {
-            "text": "Casting mold",
+            "text": "Pressing mold",
             "value": "2"
+          },
+          {
+            "text": "Casting mold",
+            "value": "3"
           }
         ],
         "minLength": 1,
@@ -118,7 +234,7 @@
         "maxLength": 1000,
         "displayCondition": {
           "idCondition": -99400,
-          "valueCondition": "Pressing mold",
+          "valueCondition": "2",
           "dataCondition": "INDIVIDUAL"
         }
       },
@@ -148,7 +264,7 @@
         "maxLength": 1000,
         "displayCondition": {
           "idCondition": -99400,
-          "valueCondition": "Casting mold",
+          "valueCondition": "3",
           "dataCondition": "INDIVIDUAL"
         }
       },

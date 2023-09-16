@@ -28,6 +28,7 @@
       },
       "additionalDisplayClass": "right-info"
     },
+
     {
       "name": "Prepared by",
       "type": "splitter",

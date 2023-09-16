@@ -4,9 +4,9 @@ B,Mold Information,,Splitter,,,,,,,,-99900
 2,Component name:,x,textarea,Individual,,,,,Ex: Louver/Hanger/Face,,-99700
 3,Product size:,x,textarea,Individual,,,,,Ex: 10X06,,-99600
 4,Mold process:,x,textarea,Individual,,,,,"Ex: Process 1, Process 2,…",,-99500
-5,Kind of mold:,x,select,Individual,,,,"Pressing mold,Casting mold",,,-99400
-6.1,Type of mold:,x,select,Individual,-99400,Pressing mold,,"Continuous Pressing,Single Pressing",,,-99300
-6.2,Type of mold:,x,select,Individual,-99400,Casting mold,,"Plastic Molding,Plastic Extrusion",,,-99200
+5,Kind of mold:,x,select,Individual,,,,"N/A,Pressing mold,Casting mold",,,-99400
+6.1,Type of mold:,x,select,Individual,-99400,2,,"Continuous Pressing,Single Pressing",,,-99300
+6.2,Type of mold:,x,select,Individual,-99400,3,,"Plastic Molding,Plastic Extrusion",,,-99200
 8,Reason for request:,x,textarea,Individual,,,,,,,-99100
 9,Manufacturing,x,select,Individual,,,,"TA,Out Source",,,-99000
 10,Urgent level,x,select,Individual,,,,"Normal,Urgent",,,-98900

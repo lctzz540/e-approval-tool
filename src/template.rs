@@ -1,5 +1,6 @@
 use serde_derive::{Deserialize, Serialize};
 use std::fs::File;
+use std::io::Write;
 use std::io::{BufReader, Read};
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -23,6 +24,12 @@ pub struct Individual {
     pub static_content: Option<String>,
     pub valuefeeder: Option<String>,
 }
+fn default_min_length() -> i64 {
+    1
+}
+fn default_max_length() -> i64 {
+    1000
+}
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -31,8 +38,10 @@ pub struct Conditions {
     #[serde(default)]
     pub data: Vec<Daum>,
     #[serde(rename = "minLength")]
+    #[serde(default = "default_min_length")]
     pub min_length: i64,
     #[serde(rename = "maxLength")]
+    #[serde(default = "default_max_length")]
     pub max_length: i64,
     pub multiple: Option<bool>,
     pub location_related: Option<bool>,
@@ -149,4 +158,9 @@ pub fn read_json_file(filename: &str) -> Option<Template> {
     };
 
     Some(root)
+}
+pub fn write_json_to_file(filename: &str, json_string: &str) -> std::io::Result<()> {
+    let mut file = File::create(filename)?;
+    file.write_all(json_string.as_bytes())?;
+    Ok(())
 }
