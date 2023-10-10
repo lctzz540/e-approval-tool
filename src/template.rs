@@ -1,6 +1,5 @@
 use serde_derive::{Deserialize, Serialize};
 use std::fs::File;
-use std::io::Write;
 use std::io::{BufReader, Read};
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -135,21 +134,7 @@ pub fn make_splitter(name: &str, id: i64, datatype: &str) -> Individual {
     individual
 }
 
-fn remove_lines_with_null(json_string: &str) -> String {
-    let lines: Vec<&str> = json_string
-        .lines()
-        .filter(|line| !line.contains("null"))
-        .collect();
-    lines.join("\n")
-}
-
-pub fn template_to_json(template: &Template) -> Result<String, serde_json::Error> {
-    let json_string = serde_json::to_string_pretty(template)?;
-
-    Ok(remove_lines_with_null(json_string.as_str()))
-}
-
-pub fn read_json_file(filename: &str) -> Option<Template> {
+pub fn read_json_file_to_template(filename: &str) -> Option<Template> {
     let file = File::open(filename).ok()?;
     let mut reader = BufReader::new(file);
 
@@ -165,9 +150,4 @@ pub fn read_json_file(filename: &str) -> Option<Template> {
     };
 
     Some(root)
-}
-pub fn write_json_to_file(filename: &str, json_string: &str) -> std::io::Result<()> {
-    let mut file = File::create(filename)?;
-    file.write_all(json_string.as_bytes())?;
-    Ok(())
 }

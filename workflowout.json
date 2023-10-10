@@ -1,0 +1,464 @@
+{
+  "relatives": [
+    {
+      "id": -3,
+      "type": "ticket",
+      "isDone": false,
+      "status": "Opened",
+      "roles": {
+        "assigner": [],
+        "implementer": []
+      },
+    },
+    {
+      "id": -11,
+      "type": "phase",
+      "isDone": false,
+      "status": "Responding",
+      "summary": "node at 1.1",
+      "autocreate": false,
+      "sla": {
+        "res": 2.0,
+        "fix": 16.0
+      },
+      "phaseType": "Implement",
+    },
+    {
+      "id": -12,
+      "type": "phase",
+      "isDone": false,
+      "status": "Responding",
+      "summary": "node at 1.2",
+      "autocreate": false,
+      "sla": {
+        "res": 2.0,
+        "fix": 16.0
+      },
+      "phaseType": "Implement",
+    },
+    {
+      "id": -13,
+      "type": "phase",
+      "isDone": false,
+      "status": "Responding",
+      "summary": "node at 1.3",
+      "autocreate": false,
+      "sla": {
+        "res": 2.0,
+        "fix": 16.0
+      },
+      "phaseType": "Implement",
+    },
+    {
+      "id": -14,
+      "type": "phase",
+      "isDone": false,
+      "status": "Responding",
+      "summary": "node at 1.4",
+      "autocreate": false,
+      "sla": {
+        "res": 2.0,
+        "fix": 16.0
+      },
+      "phaseType": "Implement",
+    },
+    {
+      "owner": "system",
+      "id": -20,
+      "type": "phase",
+      "isDone": false,
+      "role_config": {
+        "assigner": [],
+        "implementer": [],
+        "functions": [],
+        "provider_id": []
+      },
+      "status": "Responding",
+      "summary": "Auto move to next step",
+      "autocreate": false,
+      "sla": {
+        "res": 0.01,
+        "fix": 0.02
+      },
+      "phaseType": "Implement",
+      "isNotify": true,
+      "autoFinish": true,
+      "preventFeeder": true
+    },
+    {
+      "id": -31,
+      "type": "phase",
+      "isDone": false,
+      "status": "Waiting",
+      "summary": "node at 2.1",
+      "autocreate": false,
+      "sla": {
+        "res": 2.0,
+        "fix": 16.0
+      },
+      "phaseType": "Implement",
+    },
+    {
+      "id": -32,
+      "type": "phase",
+      "isDone": false,
+      "status": "Waiting",
+      "summary": "node at 2.2",
+      "autocreate": false,
+      "sla": {
+        "res": 2.0,
+        "fix": 16.0
+      },
+      "phaseType": "Implement",
+    },
+    {
+      "owner": "system",
+      "id": -40,
+      "type": "phase",
+      "isDone": false,
+      "role_config": {
+        "assigner": [],
+        "implementer": [],
+        "functions": [],
+        "provider_id": []
+      },
+      "status": "Responding",
+      "summary": "Auto move to next step",
+      "autocreate": false,
+      "sla": {
+        "res": 0.01,
+        "fix": 0.02
+      },
+      "phaseType": "Implement",
+      "isNotify": true,
+      "autoFinish": true,
+      "preventFeeder": true
+    },
+    {
+      "id": -51,
+      "type": "phase",
+      "isDone": false,
+      "status": "Waiting",
+      "summary": "node at 3.1",
+      "autocreate": false,
+      "sla": {
+        "res": 2.0,
+        "fix": 16.0
+      },
+      "phaseType": "Implement",
+    },
+    {
+      "id": -61,
+      "type": "phase",
+      "isDone": false,
+      "status": "Waiting",
+      "summary": "node at 4.1",
+      "autocreate": false,
+      "sla": {
+        "res": 2.0,
+        "fix": 16.0
+      },
+      "phaseType": "Implement",
+    },
+    {
+      "id": -62,
+      "type": "phase",
+      "isDone": false,
+      "status": "Waiting",
+      "summary": "node at 4.2",
+      "autocreate": false,
+      "sla": {
+        "res": 2.0,
+        "fix": 16.0
+      },
+      "phaseType": "Implement",
+    },
+    {
+      "id": -63,
+      "type": "phase",
+      "isDone": false,
+      "status": "Waiting",
+      "summary": "node at 4.3",
+      "autocreate": false,
+      "sla": {
+        "res": 2.0,
+        "fix": 16.0
+      },
+      "phaseType": "Implement",
+    },
+    {
+      "id": -1,
+      "type": "phase",
+      "isDone": false,
+      "status": "Waiting",
+      "summary": "User Confirm Result",
+      "roles": {
+        "assigner": [],
+        "implementer": []
+      },
+      "phaseType": "Close",
+    }
+  ],
+  "relationships": [
+    {
+      "autocreate": false,
+      "from": -3,
+      "id": -311,
+      "to": -11,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -11,
+      "id": -1120,
+      "to": -20,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -3,
+      "id": -312,
+      "to": -12,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -12,
+      "id": -1220,
+      "to": -20,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -3,
+      "id": -313,
+      "to": -13,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -13,
+      "id": -1320,
+      "to": -20,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -3,
+      "id": -314,
+      "to": -14,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -14,
+      "id": -1420,
+      "to": -20,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -20,
+      "id": -2031,
+      "to": -31,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -31,
+      "id": -3141,
+      "to": 41,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": 41,
+      "id": -4132,
+      "to": -32,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -32,
+      "id": -3241,
+      "to": 41,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -40,
+      "id": -4051,
+      "to": -51,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -51,
+      "id": -5160,
+      "to": -60,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -40,
+      "id": -4061,
+      "to": -61,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -61,
+      "id": -611,
+      "to": -1,
+      "type": "",
+      "status": "",
+      "display": false,
+      "buttonConfig": {
+        "cancel": {
+          "enable": true,
+          "text": "Cancel"
+        },
+        "approve": {
+          "enable": true,
+          "text": "Approve"
+        },
+        "requestUpdate": {
+          "enable": false,
+          "text": "Request Update"
+        }
+      },
+    },
+    {
+      "autocreate": false,
+      "from": -40,
+      "id": -4062,
+      "to": -62,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -62,
+      "id": -621,
+      "to": -1,
+      "type": "",
+      "status": "",
+      "display": false,
+      "buttonConfig": {
+        "cancel": {
+          "enable": true,
+          "text": "Cancel"
+        },
+        "approve": {
+          "enable": true,
+          "text": "Approve"
+        },
+        "requestUpdate": {
+          "enable": false,
+          "text": "Request Update"
+        }
+      },
+    },
+    {
+      "autocreate": false,
+      "from": -40,
+      "id": -4063,
+      "to": -63,
+      "type": "",
+      "status": "",
+      "display": false,
+    },
+    {
+      "autocreate": false,
+      "from": -63,
+      "id": -631,
+      "to": -1,
+      "type": "",
+      "status": "",
+      "display": false,
+      "buttonConfig": {
+        "cancel": {
+          "enable": true,
+          "text": "Cancel"
+        },
+        "approve": {
+          "enable": true,
+          "text": "Approve"
+        },
+        "requestUpdate": {
+          "enable": false,
+          "text": "Request Update"
+        }
+      },
+    }
+  ],
+  "notification_config": {
+    "approvers_pending_mail_template": 25,
+    "ticket_response_mail_template": 11,
+    "comment_mail_template": 32,
+    "viewers_assignment_mail_template": 34,
+    "watchers_ticket_rejection_mail_template": 44,
+    "ticket_result_reject_mail_template": 19,
+    "new_performer_phase_reassignment_mail_template": 21,
+    "creator_rejected_mail_template": 31,
+    "ticket_share_mail_template": 37,
+    "ticket_creation_mail_template": 9,
+    "watchers_ticket_updated_mail_template": 47,
+    "ticket_finish_inform_mail_template": 45,
+    "relationship_result_reject_mail_template": 20,
+    "creator_approved_mail_template": 33,
+    "mention_mail_template": 18,
+    "co_execute_rejection_mail_template": 35,
+    "implementation_reminder_mail_template": 29,
+    "ticket_cancellation_mail_template": 13,
+    "creator_requested_update_mail_template": 24,
+    "approval_input_finish_mail_template": 27,
+    "co_execute_request_to_update_mail_template": 36,
+    "old_performer_phase_reassignment_mail_template": 23,
+    "watchers_ticket_auto_closing_mail_template": 16,
+    "approval_reminder_no_token_mail_template": 39,
+    "watchers_ticket_creation_mail_template": 10,
+    "watchers_ticket_cancellation_mail_template": 14,
+    "creator_requested_update_reminder_mail_template": 45,
+    "ticket_updated_mail_template": 46,
+    "approval_reminder_mail_template": 28,
+    "confirmation_reminder_mail_template": 30,
+    "phase_input_finish_mail_template": 26,
+    "phase_finished_mail_template": 40,
+    "watchers_ticket_closing_mail_template": 15,
+    "watchers_ticket_response_mail_template": 12,
+    "phase_approve_finished_mail_template": 41
+  },
+  "display": []
+}

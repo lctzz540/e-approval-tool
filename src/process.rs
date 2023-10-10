@@ -1,37 +1,14 @@
-use crate::template;
+use crate::{template, utils};
 use polars::prelude::*;
 use std::error::Error;
 
-fn to_i64(value: AnyValue) -> i64 {
-    match value {
-        AnyValue::Int64(i) => i,
-        AnyValue::Float64(f) => f as i64,
-        _ => 0,
-    }
-}
-
-fn clean_value(value: AnyValue) -> String {
-    match value {
-        AnyValue::Int64(i) => i.to_string(),
-        AnyValue::Float64(f) => f.to_string(),
-        AnyValue::Utf8(s) => {
-            let cleaned_value = s
-                .chars()
-                .filter(|c| c.is_alphanumeric())
-                .collect::<String>()
-                .to_lowercase();
-            cleaned_value
-        }
-        _ => String::new(),
-    }
-}
 pub fn process_request(file_path: &str) -> Result<(), Box<dyn Error>> {
     let df = CsvReader::from_path(file_path)?
         .finish()
         .expect("Error reading CSV file");
 
     let mut _id: i64 = 0;
-    let mut template_out = match template::read_json_file("template.json") {
+    let mut template_out = match template::read_json_file_to_template("template.json") {
         Some(template) => template,
         None => template::Template::default(),
     };
@@ -50,7 +27,7 @@ pub fn process_request(file_path: &str) -> Result<(), Box<dyn Error>> {
 
         for col_name in df.get_column_names() {
             if col_name == "NO" {
-                let value = clean_value(df.column(col_name).unwrap().get(i).unwrap());
+                let value = utils::clean_value(df.column(col_name).unwrap().get(i).unwrap());
                 if !value.parse::<i32>().is_ok() {
                     _is_splitter = true;
                 }
@@ -61,7 +38,7 @@ pub fn process_request(file_path: &str) -> Result<(), Box<dyn Error>> {
             }
 
             if col_name == "LOẠI DỮ LIỆU" {
-                _datatype = clean_value(df.column(col_name).unwrap().get(i).unwrap());
+                _datatype = utils::clean_value(df.column(col_name).unwrap().get(i).unwrap());
 
                 if _datatype == "masterdata" {
                     _is_masterdata = true;
@@ -74,19 +51,19 @@ pub fn process_request(file_path: &str) -> Result<(), Box<dyn Error>> {
                 _datatype = df.column(col_name).unwrap().get(i).unwrap().to_string();
             }
             if col_name == "Json ID" {
-                _id = to_i64(df.column(col_name).unwrap().get(i).unwrap());
+                _id = utils::to_i64(df.column(col_name).unwrap().get(i).unwrap());
             }
 
             if col_name == "dataFrom" {
-                _data_from = to_i64(df.column(col_name).unwrap().get(i).unwrap());
+                _data_from = utils::to_i64(df.column(col_name).unwrap().get(i).unwrap());
             }
 
             if col_name == "displayConditionID" {
-                _display_condition_id = to_i64(df.column(col_name).unwrap().get(i).unwrap());
+                _display_condition_id = utils::to_i64(df.column(col_name).unwrap().get(i).unwrap());
             }
 
             if col_name == "BĂT BUỘC" {
-                let value = clean_value(df.column(col_name).unwrap().get(i).unwrap());
+                let value = utils::clean_value(df.column(col_name).unwrap().get(i).unwrap());
 
                 if value == "x" {
                     _is_required = true;
@@ -156,9 +133,9 @@ pub fn process_request(file_path: &str) -> Result<(), Box<dyn Error>> {
             ));
         }
     }
-    match template::template_to_json(&template_out) {
+    match utils::template_to_json(&template_out) {
         Ok(json_string) => {
-            if let Err(err) = template::write_json_to_file("output.json", &json_string) {
+            if let Err(err) = utils::write_json_to_file("output.json", &json_string) {
                 eprintln!("Error exporting JSON to file: {}", err);
             }
         }

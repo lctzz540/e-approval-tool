@@ -1,0 +1,757 @@
+{
+  "relatives": [
+    {
+      "roles": {
+        "assigner": [
+          ""
+        ],
+        "implementer": []
+      },
+      "id": -3,
+      "type": "ticket",
+      "isDone": false,
+      "status": "Opened"
+    },
+    {
+      "summary": "QC",
+      "owner": "",
+      "roles": {
+        "assigner": [],
+        "implementer": []
+      },
+      "autocreate": true,
+      "sla": {
+        "res": 2,
+        "fix": 16
+      },
+      "id": -21,
+      "type": "phase",
+      "isDone": false,
+      "phaseType": "Implement",
+      "status": "Waiting",
+      "role_config": {
+        "functions": [
+          {
+            "role_type_to_add": "implementer",
+            "id": 3,
+            "params": [
+              {
+                "infoId": -96800,
+                "name": "info",
+                "type": "INPUT",
+                "dataset": "INDIVIDUAL"
+              }
+            ]
+          },
+          {
+            "role_type_to_add": "assigner",
+            "id": 3,
+            "params": [
+              {
+                "infoId": -96800,
+                "name": "info",
+                "type": "INPUT",
+                "dataset": "INDIVIDUAL"
+              }
+            ]
+          }
+        ],
+        "provider_id": []
+      }
+    },
+    {
+      "owner": "",
+      "summary": "Process Engineer",
+      "roles": {
+        "assigner": [],
+        "implementer": []
+      },
+      "autocreate": true,
+      "sla": {
+        "res": 2,
+        "fix": 16
+      },
+      "id": -22,
+      "type": "phase",
+      "isDone": false,
+      "phaseType": "Implement",
+      "role_config": {
+        "functions": [
+          {
+            "role_type_to_add": "implementer",
+            "id": 3,
+            "params": [
+              {
+                "infoId": -96500,
+                "name": "info",
+                "type": "INPUT",
+                "dataset": "INDIVIDUAL"
+              }
+            ]
+          },
+          {
+            "role_type_to_add": "assigner",
+            "id": 3,
+            "params": [
+              {
+                "infoId": -96500,
+                "name": "info",
+                "type": "INPUT",
+                "dataset": "INDIVIDUAL"
+              }
+            ]
+          }
+        ],
+        "provider_id": []
+      },
+      "status": "Responding"
+    },
+    {
+      "summary": "Tooling Engineer",
+      "owner": "",
+      "roles": {
+        "assigner": [],
+        "implementer": []
+      },
+      "autocreate": true,
+      "sla": {
+        "res": 2,
+        "fix": 16
+      },
+      "id": -23,
+      "type": "phase",
+      "isDone": false,
+      "phaseType": "Implement",
+      "status": "responding",
+      "role_config": {
+        "functions": [
+          {
+            "role_type_to_add": "implementer",
+            "id": 3,
+            "params": [
+              {
+                "infoId": -96300,
+                "name": "info",
+                "type": "INPUT",
+                "dataset": "INDIVIDUAL"
+              }
+            ]
+          },
+          {
+            "role_type_to_add": "assigner",
+            "id": 3,
+            "params": [
+              {
+                "infoId": -96300,
+                "name": "info",
+                "type": "INPUT",
+                "dataset": "INDIVIDUAL"
+              }
+            ]
+          }
+        ],
+        "provider_id": []
+      }
+    },
+    {
+      "owner": "system",
+      "summary": "Auto move to next step",
+      "isNotify": true,
+      "roles": {
+        "assigner": [],
+        "implementer": []
+      },
+      "autoFinish": true,
+      "sla": {
+        "res": 0.01,
+        "fix": 0.02
+      },
+      "preventFeeder": true,
+      "type": "phase",
+      "isDone": false,
+      "phaseType": "Implement",
+      "autocreate": true,
+      "id": -30,
+      "role_config": {
+        "functions": [],
+        "provider_id": []
+      },
+      "status": "Responding"
+    },
+    {
+      "owner": "",
+      "summary": "4.1 Approve by IE Manager",
+      "isNotify": true,
+      "roles": {
+        "assigner": [],
+        "implementer": []
+      },
+      "autocreate": true,
+      "sla": {
+        "res": 7.99,
+        "fix": 8
+      },
+      "id": -41,
+      "type": "phase",
+      "isDone": false,
+      "phaseType": "Implement",
+      "role_config": {
+        "functions": [
+          {
+            "role_type_to_add": "implementer",
+            "id": 3,
+            "params": [
+              {
+                "infoId": -95900,
+                "name": "info",
+                "type": "INPUT",
+                "dataset": "INDIVIDUAL"
+              }
+            ]
+          },
+          {
+            "role_type_to_add": "assigner",
+            "id": 3,
+            "params": [
+              {
+                "infoId": -95900,
+                "name": "info",
+                "type": "INPUT",
+                "dataset": "INDIVIDUAL"
+              }
+            ]
+          }
+        ],
+        "provider_id": []
+      },
+      "status": "Responding"
+    },
+    {
+      "owner": "",
+      "summary": "4.2 Approve by Production Manager",
+      "isNotify": true,
+      "roles": {
+        "assigner": [],
+        "implementer": []
+      },
+      "autocreate": true,
+      "sla": {
+        "res": 7.99,
+        "fix": 8
+      },
+      "id": -42,
+      "type": "phase",
+      "isDone": false,
+      "phaseType": "Implement",
+      "role_config": {
+        "functions": [
+          {
+            "role_type_to_add": "implementer",
+            "id": 3,
+            "params": [
+              {
+                "infoId": -95600,
+                "name": "info",
+                "type": "INPUT",
+                "dataset": "INDIVIDUAL"
+              }
+            ]
+          },
+          {
+            "role_type_to_add": "assigner",
+            "id": 3,
+            "params": [
+              {
+                "infoId": -95600,
+                "name": "info",
+                "type": "INPUT",
+                "dataset": "INDIVIDUAL"
+              }
+            ]
+          }
+        ],
+        "provider_id": []
+      },
+      "status": "Responding"
+    },
+    {
+      "summary": "End",
+      "autocreate": true,
+      "id": -1,
+      "type": "phase",
+      "isDone": false,
+      "phaseType": "Close",
+      "status": "Waiting"
+    }
+  ],
+  "relationships": [
+    {
+      "autocreate": true,
+      "from": -3,
+      "id": -321,
+      "to": -21,
+      "position": -100,
+      "type": "default",
+      "status": "finished"
+    },
+    {
+      "autocreate": true,
+      "from": -3,
+      "id": -322,
+      "to": -22,
+      "position": -100,
+      "type": "default",
+      "status": "finished"
+    },
+    {
+      "autocreate": true,
+      "from": -3,
+      "id": -323,
+      "to": -23,
+      "position": -100,
+      "type": "default",
+      "status": "finished"
+    },
+    {
+      "autocreate": true,
+      "display": false,
+      "from": -3,
+      "id": -341,
+      "position": -100,
+      "to": -41,
+      "type": "default",
+      "status": "finished"
+    },
+    {
+      "autocreate": true,
+      "display": false,
+      "from": -3,
+      "id": -342,
+      "position": -100,
+      "to": -42,
+      "type": "default",
+      "status": "finished"
+    },
+    {
+      "autocreate": true,
+      "display": false,
+      "from": -21,
+      "id": -2141,
+      "position": -100,
+      "to": -41,
+      "type": "default",
+      "status": "finished"
+    },
+    {
+      "autocreate": true,
+      "display": false,
+      "from": -22,
+      "id": -2141,
+      "position": -100,
+      "to": -41,
+      "type": "default",
+      "status": "finished"
+    },
+    {
+      "autocreate": true,
+      "display": false,
+      "from": -23,
+      "id": -2341,
+      "position": -100,
+      "to": -41,
+      "type": "default",
+      "status": "finished"
+    },
+    {
+      "autocreate": true,
+      "display": false,
+      "from": -21,
+      "id": -2142,
+      "position": -100,
+      "to": -42,
+      "type": "default",
+      "status": "finished"
+    },
+    {
+      "autocreate": true,
+      "display": false,
+      "from": -22,
+      "id": -2242,
+      "position": -100,
+      "to": -42,
+      "type": "default",
+      "status": "finished"
+    },
+    {
+      "autocreate": true,
+      "display": false,
+      "from": -23,
+      "id": -2342,
+      "position": -100,
+      "to": -42,
+      "type": "default",
+      "status": "finished"
+    },
+    {
+      "buttonConfig": {
+        "cancel": {
+          "enable": false,
+          "text": "Cancel"
+        },
+        "approve": {
+          "enable": true,
+          "text": "Approve"
+        },
+        "requestUpdate": {
+          "enable": true,
+          "text": "Decline and Request Update"
+        }
+      },
+      "autocreate": true,
+      "from": -21,
+      "id": -2130,
+      "to": -30,
+      "detail": {
+        "individual": [
+          {
+            "staticContent": "<p style='font-size: 12px; color: #f44842'><i></i></p>",
+            "display": true,
+            "name": "Note",
+            "additionalDisplayClass": "left-info",
+            "id": -12130,
+            "position": -1000,
+            "type": "textarea",
+            "conditions": {
+              "max-length": 1000,
+              "required": false,
+              "min-length": 1
+            },
+            "value": ""
+          }
+        ]
+      },
+      "type": "approval",
+      "status": "waiting"
+    },
+    {
+      "buttonConfig": {
+        "cancel": {
+          "enable": false,
+          "text": "Cancel"
+        },
+        "approve": {
+          "enable": true,
+          "text": "Approve"
+        },
+        "requestUpdate": {
+          "enable": true,
+          "text": "Decline and Request Update"
+        }
+      },
+      "autocreate": true,
+      "from": -22,
+      "id": -2230,
+      "to": -30,
+      "detail": {
+        "individual": [
+          {
+            "staticContent": "<p style='font-size: 12px; color: #f44842'><i></i></p>",
+            "display": true,
+            "name": "Note",
+            "additionalDisplayClass": "left-info",
+            "id": -12230,
+            "position": -1000,
+            "type": "textarea",
+            "conditions": {
+              "max-length": 1000,
+              "required": false,
+              "min-length": 1
+            },
+            "value": ""
+          }
+        ]
+      },
+      "type": "approval",
+      "status": "waiting"
+    },
+    {
+      "buttonConfig": {
+        "cancel": {
+          "enable": false,
+          "text": "Cancel"
+        },
+        "approve": {
+          "enable": true,
+          "text": "Approve"
+        },
+        "requestUpdate": {
+          "enable": true,
+          "text": "Decline and Request Update"
+        }
+      },
+      "autocreate": true,
+      "from": -23,
+      "id": -2330,
+      "to": -30,
+      "detail": {
+        "individual": [
+          {
+            "staticContent": "<p style='font-size: 12px; color: #f44842'><i></i></p>",
+            "display": true,
+            "name": "Note",
+            "additionalDisplayClass": "left-info",
+            "id": -12330,
+            "position": -1000,
+            "type": "textarea",
+            "conditions": {
+              "max-length": 1000,
+              "required": false,
+              "min-length": 1
+            },
+            "value": ""
+          }
+        ]
+      },
+      "type": "approval",
+      "status": "waiting"
+    },
+    {
+      "autocreate": true,
+      "from": -30,
+      "id": -3041,
+      "to": -41,
+      "detail": {
+        "individual": [
+          {
+            "staticContent": "<p style='font-size: 12px; color: #f44842'><i></i></p>",
+            "display": true,
+            "name": "Note",
+            "additionalDisplayClass": "left-info",
+            "id": -1000,
+            "position": -1000,
+            "type": "textarea",
+            "conditions": {
+              "max-length": 1000,
+              "required": false,
+              "min-length": 1
+            },
+            "value": ""
+          }
+        ]
+      },
+      "type": "approval",
+      "status": "waiting"
+    },
+    {
+      "autocreate": true,
+      "from": -30,
+      "id": -3042,
+      "to": -42,
+      "detail": {
+        "individual": [
+          {
+            "staticContent": "<p style='font-size: 12px; color: #f44842'><i></i></p>",
+            "display": true,
+            "name": "Note",
+            "additionalDisplayClass": "left-info",
+            "id": -1000,
+            "position": -1000,
+            "type": "textarea",
+            "conditions": {
+              "max-length": 1000,
+              "required": false,
+              "min-length": 1
+            },
+            "value": ""
+          }
+        ]
+      },
+      "type": "approval",
+      "status": "waiting"
+    },
+    {
+      "buttonConfig": {
+        "cancel": {
+          "enable": true,
+          "text": "Cancel"
+        },
+        "approve": {
+          "enable": true,
+          "text": "Approve"
+        },
+        "requestUpdate": {
+          "enable": false,
+          "text": "Deacline and Request Update"
+        }
+      },
+      "autocreate": true,
+      "from": -41,
+      "id": -411,
+      "to": -1,
+      "detail": {
+        "individual": [
+          {
+            "staticContent": "<p style='font-size: 12px; color: #f44842'><i></i></p>",
+            "display": true,
+            "name": "Note",
+            "additionalDisplayClass": "left-info",
+            "id": -1000,
+            "position": -1000,
+            "type": "textarea",
+            "conditions": {
+              "max-length": 1000,
+              "required": false,
+              "min-length": 1
+            },
+            "value": ""
+          }
+        ]
+      },
+      "type": "approval",
+      "status": "waiting"
+    },
+    {
+      "buttonConfig": {
+        "cancel": {
+          "enable": true,
+          "text": "Cancel"
+        },
+        "approve": {
+          "enable": true,
+          "text": "Approve"
+        },
+        "requestUpdate": {
+          "enable": false,
+          "text": "Decline and Request Update"
+        }
+      },
+      "autocreate": true,
+      "from": -42,
+      "id": -421,
+      "to": -1,
+      "detail": {
+        "individual": [
+          {
+            "staticContent": "<p style='font-size: 12px; color: #f44842'><i></i></p>",
+            "display": true,
+            "name": "Note",
+            "additionalDisplayClass": "left-info",
+            "id": -1000,
+            "position": -1000,
+            "type": "textarea",
+            "conditions": {
+              "max-length": 1000,
+              "required": false,
+              "min-length": 1
+            },
+            "value": ""
+          }
+        ]
+      },
+      "type": "approval",
+      "status": "waiting"
+    }
+  ],
+  "notification_config": {
+    "approvers_pending_mail_template": 25,
+    "ticket_response_mail_template": 11,
+    "comment_mail_template": 32,
+    "viewers_assignment_mail_template": 34,
+    "inform_bill_mail_template": 32,
+    "approval_overdue_reminder_mail_template": 41,
+    "ticket_result_reject_mail_template": 19,
+    "watchers_ticket_rejection_mail_template": 184,
+    "creator_rejected_mail_template": 31,
+    "new_performer_phase_reassignment_mail_template": 21,
+    "ticket_share_mail_template": 37,
+    "ticket_creation_mail_template": 9,
+    "implementation_overdue_reminder_mail_template": 219,
+    "watchers_ticket_updated_mail_template": 208,
+    "ticket_finish_inform_mail_template": 45,
+    "relationship_result_reject_mail_template": 20,
+    "creator_approved_mail_template": 33,
+    "co_execute_rejection_mail_template": 35,
+    "mention_mail_template": 18,
+    "implementation_reminder_mail_template": 29,
+    "creator_requested_update_mail_template": 24,
+    "ticket_cancellation_mail_template": 13,
+    "approval_input_finish_mail_template": 27,
+    "co_execute_request_to_update_mail_template": 36,
+    "old_performer_phase_reassignment_mail_template": 23,
+    "watchers_ticket_auto_closing_mail_template": 16,
+    "approval_reminder_no_token_mail_template": 39,
+    "watchers_ticket_creation_mail_template": 10,
+    "watchers_ticket_cancellation_mail_template": 14,
+    "approval_reminder_mail_template": 28,
+    "confirmation_reminder_mail_template": 30,
+    "phase_input_finish_mail_template": 26,
+    "phase_finished_mail_template": 40,
+    "watchers_ticket_closing_mail_template": 15,
+    "watchers_ticket_response_mail_template": 12,
+    "phase_approve_finished_mail_template": 41
+  },
+  "display": [
+    {
+      "positions": [
+        200,
+        50
+      ],
+      "id": -3
+    },
+    {
+      "image": "/images/workflowimage/User_male.png",
+      "positions": [
+        100,
+        150
+      ],
+      "id": -21
+    },
+    {
+      "image": "/images/workflowimage/User_male.png",
+      "positions": [
+        200,
+        150
+      ],
+      "id": -22
+    },
+    {
+      "image": "/images/workflowimage/User_male.png",
+      "positions": [
+        300,
+        150
+      ],
+      "id": -23
+    },
+    {
+      "image": "https://trienkhai.spro.eiss.vn/plugins/servlet/sms-attachment?id=4016&fileName=material.png",
+      "positions": [
+        200,
+        250
+      ],
+      "id": -30
+    },
+    {
+      "image": "/images/workflowimage/User_male.png",
+      "positions": [
+        150,
+        350
+      ],
+      "id": -41
+    },
+    {
+      "image": "/images/workflowimage/User_male.png",
+      "positions": [
+        250,
+        350
+      ],
+      "id": -42
+    },
+    {
+      "positions": [
+        200,
+        600
+      ],
+      "id": -1
+    }
+  ]
+}
