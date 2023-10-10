@@ -1,4 +1,4 @@
-# E-Approval tool work for fpt product
+# E-Approval tool for https://e-approval-uat.truaire.vn
 
 ## Usage:
 
